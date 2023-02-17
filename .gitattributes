@@ -1,0 +1,5 @@
+weightsTweet.h5 filter=lfs diff=lfs merge=lfs -text
+fashion-mnist_train.csv filter=lfs diff=lfs merge=lfs -text
+ckpt-1.data-00000-of-00002 filter=lfs diff=lfs merge=lfs -text
+data_inputs.csv filter=lfs diff=lfs merge=lfs -text
+trainTweets.csv filter=lfs diff=lfs merge=lfs -text

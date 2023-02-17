@@ -1,0 +1,40 @@
+[System]
+Name='fuzzy_2'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=3
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Service'
+Range=[0 9]
+NumMFs=3
+MF1='deficient':'trimf',[0 0 4]
+MF2='good':'trapmf',[1 4 6 9]
+MF3='excelent':'trimf',[6 9 9]
+
+[Input2]
+Name='Food'
+Range=[0 9]
+NumMFs=2
+MF1='rancid':'trapmf',[0 0 1 3]
+MF2='delicious':'trimf',[7 9 9]
+
+[Output1]
+Name='Tip'
+Range=[0 30]
+NumMFs=3
+MF1='little':'trimf',[0 5 10]
+MF2='average':'trimf',[10 15 20]
+MF3='generous':'trimf',[20 25 30]
+
+[Rules]
+1 1, 1 (1) : 2
+2 0, 2 (1) : 1
+3 2, 3 (1) : 2
